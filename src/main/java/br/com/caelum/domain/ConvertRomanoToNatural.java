@@ -40,7 +40,7 @@ public class ConvertRomanoToNatural implements ConvertivelParaRomano{
 	}
 
 	private Set<Integer> devolveListaDeMenoresIndices() {
-	/*	lessIndices = new HashSet<Integer>();
+		lessIndices = new HashSet<Integer>();
 		for (int i = 0; i < numLength; ++i) {
 			System.out.println("se " + i + 1 + " < totalpPalavra " + numLength);
 			if (i + 1 < numLength) {
@@ -53,12 +53,11 @@ public class ConvertRomanoToNatural implements ConvertivelParaRomano{
 
 			}
 		}
-		return lessIndices;*/
-		return null;
+		return lessIndices;
 	}
 
 	private int getResultado() {
-		/*int num = 0;
+		int num = 0;
 		for (int i = 0; i < numLength;) {
 			if (!lessIndices.contains(i)) {
 				num = num + romanToIntegerMap.get(romanString[i]);
@@ -69,8 +68,7 @@ public class ConvertRomanoToNatural implements ConvertivelParaRomano{
 			}
 		}
 		System.out.println("The integer representation of the roman numeral is : " + num);
-		return num;*/
-		return 0;
+		return num;
 
 	}
 }
