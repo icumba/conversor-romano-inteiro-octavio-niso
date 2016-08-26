@@ -13,5 +13,11 @@ public class ConvertRomanoToNaturalTest {
 		ConvertRomanoToNatural convertRomanoToNatural = new ConvertRomanoToNatural();
 		assertEquals(10, convertRomanoToNatural.retornaNumeroNatural("X")); 
 	}
+	
+	@Test
+	public void deveNulAoColocarNumeroRomanoNegativo() {
+		ConvertRomanoToNatural convertRomanoToNatural = new ConvertRomanoToNatural();
+		assertEquals(null, convertRomanoToNatural.retornaNumeroNatural("-X")); 
+	}
 
 }
