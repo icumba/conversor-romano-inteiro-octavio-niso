@@ -14,7 +14,7 @@ public class ConvertRomanoToNaturalTest {
 		assertEquals(10, convertRomanoToNatural.retornaNumeroNatural("X")); 
 	}
 	
-	@Test
+	@Test(expected=NullPointerException.class)
 	public void deveNulAoColocarNumeroRomanoNegativo() {
 		ConvertRomanoToNatural convertRomanoToNatural = new ConvertRomanoToNatural();
 		assertEquals(null, convertRomanoToNatural.retornaNumeroNatural("-X")); 
