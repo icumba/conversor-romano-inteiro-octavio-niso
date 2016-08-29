@@ -22,9 +22,9 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<mvc:interceptors>
+	<!-- <mvc:interceptors>
 		<bean class="br.com.caelum.interceptor.AutorizadorInterceptor" />
-	</mvc:interceptors>
+	</mvc:interceptors> -->
 
 	<mvc:default-servlet-handler />
 

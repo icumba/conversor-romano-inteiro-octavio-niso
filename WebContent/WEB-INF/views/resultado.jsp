@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Indice</title>
+<title>Resultado</title>
 </head>
 <body>
-<a href="converte">converte</a>
+<a href="converte">formulario</a>
+
+${resultadoFinal}
+
 </body>
 </html>

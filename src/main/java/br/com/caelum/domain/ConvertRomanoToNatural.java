@@ -7,6 +7,7 @@ import java.util.Set;
 import br.com.caelum.interfaces.ConvertivelParaRomano;
 
 public class ConvertRomanoToNatural implements ConvertivelParaRomano{
+	
 	private String[] romanString;
 	private HashMap<String, Integer> romanToIntegerMap;
 	private Set<Integer> lessIndices ;
@@ -33,11 +34,13 @@ public class ConvertRomanoToNatural implements ConvertivelParaRomano{
 
 	@Override
 	public int retornaNumeroNatural(String numeroRomano) {
+	//	System.out.println(numeroRomano+" zzz");
 		romanString = numeroRomano.split("");
 		numLength = romanString.length;
 		devolveListaDeMenoresIndices();
 		return getResultado();
 	}
+	
 
 	private Set<Integer> devolveListaDeMenoresIndices() {
 		lessIndices = new HashSet<Integer>();
@@ -46,10 +49,12 @@ public class ConvertRomanoToNatural implements ConvertivelParaRomano{
 			if (i + 1 < numLength) {
 				System.out.println(i + " = " + romanToIntegerMap.get(romanString[i]) + " < "
 						+ romanToIntegerMap.get(romanString[i + 1]));
-				if (romanToIntegerMap.get(romanString[i]) < romanToIntegerMap.get(romanString[i + 1])) {
-					lessIndices.add(i);
-					System.out.println("Introduziu " + i);
-				}
+				
+					if (romanToIntegerMap.get(romanString[i]) < romanToIntegerMap.get(romanString[i + 1])) {
+						lessIndices.add(i);
+						System.out.println("Introduziu " + i);
+					}
+				
 
 			}
 		}
@@ -71,4 +76,28 @@ public class ConvertRomanoToNatural implements ConvertivelParaRomano{
 		return num;
 
 	}
+
+	public String getRomanString() {
+		StringBuilder sb= new StringBuilder();
+		
+		for (int i = 0; i < romanString.length; i++) {
+			if(romanString[i]!=null || romanString[i].equals("") || romanString[i].isEmpty()){
+				sb.append(romanString[i]);
+			}
+			
+		}
+		String s = sb.toString();
+		return s;
+	}
+	
+	/*public String[] getRomanStringArray() {
+		return romanString;
+	}*/
+
+	public void setRomanString(String romanString) {
+		this.romanString = romanString.split("");
+	}
+	
+	
+	
 }
